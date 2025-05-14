@@ -1,0 +1,25 @@
+th {
+    background-color: #9d9a55;
+    color: white;
+    padding: 18px;
+    font-size: 110%;
+    border: 1px solid #7a7841;
+}
+
+td {
+    padding: 5px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: 1px solid #7a7841;
+}
+
+tr:nth-child(odd) {
+    background-color: #c5c288;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+

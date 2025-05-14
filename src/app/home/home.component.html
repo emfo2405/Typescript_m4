@@ -1,18 +1,18 @@
 <h1>Kursinformation</h1>
 
 <div id="kurs-info">
-    <table *ngFor = "let info of courseInfo">
+    <table>
         <tr>
             <th>Kurskod</th>
             <th>Kursnamn</th>
             <th>Progression</th>
             <th>Kursplan</th>
         </tr>
-        <tr>
-            <th>{{ info.code }}</th>
-            <th>{{ info.coursename }}</th>
-            <th>{{ info.progression }}</th>
-            <th> <a href="{{ info.syllabus }}">Kursplan</a></th>
+        <tr  *ngFor = "let info of courseInfo">
+            <td>{{ info.code }}</td>
+            <td>{{ info.coursename }}</td>
+            <td>{{ info.progression }}</td>
+            <td> <a href="{{ info.syllabus }}">Kursplan</a></td>
         </tr>
     </table>
 </div>
