@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Info } from '../models/info';
 import { CourseService } from '../services/course.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
