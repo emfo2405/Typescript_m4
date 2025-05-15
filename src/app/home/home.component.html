@@ -1,6 +1,12 @@
 <h1>Kursinformation</h1>
 
 <div id="kurs-info">
+    <div id="search">
+        <label for="searchbar">Sök efter kurs:</label>
+        <input type="text" id="searchbar" [(ngModel)]="searchedValue" (input)="searchCourse()">
+    </div>
+
+
     <table>
         <tr>
             <th>Kurskod</th>
@@ -8,7 +14,7 @@
             <th>Progression</th>
             <th>Kursplan</th>
         </tr>
-        <tr  *ngFor = "let info of courseInfo">
+        <tr  *ngFor = "let info of searchedCourse">
             <td>{{ info.code }}</td>
             <td>{{ info.coursename }}</td>
             <td>{{ info.progression }}</td>

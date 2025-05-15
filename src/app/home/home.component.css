@@ -32,4 +32,14 @@ h1{
     padding-top: 35px;
 }
 
+a {
+    text-decoration: none;
+    color: #454415;
+}
+
+a:hover {
+   color: #848132;
+}
+
+
 
