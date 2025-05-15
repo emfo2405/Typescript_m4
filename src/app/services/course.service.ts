@@ -9,6 +9,8 @@ import { Info } from '../models/info';
 export class CourseService {
   //Properties
   url: string = "https://webbutveckling.miun.se/files/ramschema.json";
+
+  
   constructor(private http: HttpClient) { }
 
   //Metod

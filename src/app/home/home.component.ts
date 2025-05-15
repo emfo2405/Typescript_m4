@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Info } from '../models/info';
 import { CourseService } from '../services/course.service';
 import { CommonModule } from '@angular/common';
@@ -12,23 +12,26 @@ import { FormsModule } from '@angular/forms';
 })
 export class HomeComponent {
 //Properties
-courseInfo: Info[] = [];
-searchedCourse: Info[] = [];
-searchedValue: string = ""
+courseInfo = signal<Info[]>([])
+searchedCourse = signal<Info[]>([])
+searchedValue = signal<string>("")
 
-constructor(private courseService: CourseService) {}
+courseService = inject(CourseService);
+
 
 ngOnInit() {
   this.courseService.getCourseInfo().subscribe((courseInfo) => {
-    this.courseInfo = courseInfo;
-    this.searchedCourse = courseInfo;
+    this.courseInfo.set(courseInfo);
+    this.searchedCourse.set(courseInfo);
   })
 }
 
 searchCourse(): void {
-  this.searchedCourse = this.courseInfo.filter((info) => {
-    return info.code.toLowerCase().includes(this.searchedValue.toLowerCase()) ||
-     info.coursename.toLowerCase().includes(this.searchedValue.toLowerCase())
+  let searched = this.courseInfo().filter((info) => {
+    return info.code.toLowerCase().includes(this.searchedValue().toLowerCase()) ||
+     info.coursename.toLowerCase().includes(this.searchedValue().toLowerCase())
   });
+
+  this.searchedCourse.set(searched);
 }
 }
