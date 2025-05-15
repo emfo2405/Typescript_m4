@@ -65,6 +65,10 @@ a:hover {
     vertical-align: -6px;
 }
 
+th:hover {
+    cursor: pointer;
+}
+
 
 
 
