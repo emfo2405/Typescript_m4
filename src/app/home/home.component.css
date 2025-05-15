@@ -60,6 +60,11 @@ a:hover {
     color: #c5c288;
 }
 
+.material-symbols-outlined {
+    display: inline-block;
+    vertical-align: -6px;
+}
+
 
 
 

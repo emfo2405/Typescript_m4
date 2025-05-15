@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_drop_down" />
+
 <h1>Kursinformation</h1>
 
 <div id="kurs-info">
@@ -9,12 +11,12 @@
 
     <table>
         <tr>
-            <th>Kurskod</th>
-            <th>Kursnamn</th>
-            <th>Progression</th>
+            <th>Kurskod <span class="material-symbols-outlined">arrow_drop_down</span></th>
+            <th>Kursnamn <span class="material-symbols-outlined">arrow_drop_down</span></th>
+            <th>Progression <span class="material-symbols-outlined">arrow_drop_down</span></th>
             <th>Kursplan</th>
         </tr>
-        <tr  *ngFor = "let info of searchedCourse">
+        <tr  *ngFor = "let info of searchedCourse()">
             <td>{{ info.code }}</td>
             <td>{{ info.coursename }}</td>
             <td>{{ info.progression }}</td>
