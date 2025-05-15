@@ -34,4 +34,21 @@ searchCourse(): void {
 
   this.searchedCourse.set(searched);
 }
+
+sortCourseCode(): void {
+  const sorted = [...this.searchedCourse()].sort((a,b) => a.code > b.code ? 1 : -1);
+  this.searchedCourse.set(sorted);
+}
+
+sortCourseName(): void {
+  const sorted = [...this.searchedCourse()].sort((a,b) => a.coursename > b.coursename ? 1 : -1);
+  this.searchedCourse.set(sorted);
+}
+
+sortProgression(): void {
+  const sorted = [...this.searchedCourse()].sort((a,b) => a.progression > b.progression ? 1 : -1);
+  this.searchedCourse.set(sorted);
+}
+
+
 }

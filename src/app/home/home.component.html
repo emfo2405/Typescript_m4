@@ -11,9 +11,9 @@
 
     <table>
         <tr>
-            <th>Kurskod <span class="material-symbols-outlined">arrow_drop_down</span></th>
-            <th>Kursnamn <span class="material-symbols-outlined">arrow_drop_down</span></th>
-            <th>Progression <span class="material-symbols-outlined">arrow_drop_down</span></th>
+            <th (click)="sortCourseCode()" id="coursecode">Kurskod <span class="material-symbols-outlined">arrow_drop_down</span></th>
+            <th (click)="sortCourseName()"  id="coursename">Kursnamn <span class="material-symbols-outlined">arrow_drop_down</span></th>
+            <th  (click)="sortProgression()" id="progression">Progression <span class="material-symbols-outlined">arrow_drop_down</span></th>
             <th>Kursplan</th>
         </tr>
         <tr  *ngFor = "let info of searchedCourse()">
