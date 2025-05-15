@@ -41,5 +41,26 @@ a:hover {
    color: #848132;
 }
 
+#search {
+    margin: auto;
+    width: 33%;
+    padding: 10px;
+}
+
+#searchbar {
+    padding: 5px;
+    border: 1px solid #7a7841;
+    border-right: 3px solid #7a7841;
+    border-bottom: 3px solid #7a7841;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+::placeholder {
+    color: #c5c288;
+}
+
+
+
 
 
