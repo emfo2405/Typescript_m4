@@ -7,7 +7,7 @@ th {
 }
 
 td {
-    padding: 5px;
+    padding: 10px;
     padding-left: 18px;
     padding-right: 18px;
     border: 1px solid #7a7841;
@@ -15,11 +15,21 @@ td {
 
 tr:nth-child(odd) {
     background-color: #c5c288;
+}
 
+tr:nth-child(even) {
+    background-color: #fcfaea;
 }
 
 table {
     border-collapse: collapse;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    padding: 15px;
+    padding-top: 35px;
 }
 
 
